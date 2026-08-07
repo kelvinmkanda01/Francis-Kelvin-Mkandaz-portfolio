@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francis Kelvin Mkanda — Design. Develop. Support.</title>
-<meta name="description" content="Francis Kelvin Mkanda — Graphic Designer, Web Developer & Tech Support Specialist based in Malawi.">
+<title>Francis Kelvin Mkanda — Design. Develop. Analyze. Support.</title>
+<meta name="description" content="Francis Kelvin Mkanda — Graphic Designer, Web Developer, Data Analyst & Tech Support Specialist based in Malawi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -242,9 +242,8 @@
 
   /* SERVICES */
   .services-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+    display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:20px;
   }
-  @media (max-width:960px){.services-grid{grid-template-columns:1fr 1fr;}}
   @media (max-width:560px){.services-grid{grid-template-columns:1fr;}}
   .service-card{
     background:var(--bg-elev);border:1px solid var(--border);
@@ -478,7 +477,7 @@
     <div class="role-line">
       <span class="role-word" id="roleWord">Graphic Designer</span><span class="cursor-bar"></span>
     </div>
-    <p class="lead">I design the visual identity, build the website that carries it, and stay on hand to keep the people and machines behind it running smoothly. One person, three disciplines, one goal: make technology and design work for you.</p>
+    <p class="lead">I design the visual identity, build the website that carries it, dig into the numbers behind it, and stay on hand to keep the people and machines running smoothly. One person, four disciplines, one goal: make technology and design work for you.</p>
     <div class="hero-ctas">
       <a href="#portfolio" class="btn btn-primary">View My Work</a>
       <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -492,7 +491,7 @@
     <div class="section-head reveal">
       <div class="eyebrow">what i do</div>
       <h2>Services</h2>
-      <p>Four disciplines, one working philosophy: understand the problem before touching a tool.</p>
+      <p>Five disciplines, one working philosophy: understand the problem before touching a tool.</p>
     </div>
     <div class="services-grid">
       <div class="service-card card-brown reveal">
@@ -509,6 +508,11 @@
         <span class="icon">🛠️</span>
         <h3>App &amp; End-User Support</h3>
         <p>Helping people actually use their phones and computers — troubleshooting, software installs, and patient one-on-one training.</p>
+      </div>
+      <div class="service-card card-blue reveal">
+        <span class="icon">📊</span>
+        <h3>Data Analysis</h3>
+        <p>Cleaning and organising raw data, building dashboards and reports, and turning numbers into insights people can actually act on.</p>
       </div>
       <div class="service-card card-soon reveal">
         <span class="badge">coming soon</span>
@@ -532,6 +536,7 @@
       <button class="tab" data-filter="design">Design</button>
       <button class="tab" data-filter="dev">Development</button>
       <button class="tab" data-filter="support">Support</button>
+      <button class="tab" data-filter="data">Data Analysis</button>
       <button class="tab" data-filter="photo">Photography</button>
     </div>
 
@@ -621,6 +626,21 @@
         <p>Virus cleanup and a clean Windows reinstall that brought a university student's laptop back to life before exams.</p>
       </div>
 
+      <!-- Data Analysis -->
+      <div class="p-card support-card reveal" data-cat="data">
+        <span class="icon">📈</span>
+        <div class="p-tag" style="--tag-color:var(--accent-blue);">dashboard</div>
+        <h3>Retail Sales Dashboard</h3>
+        <p>Built a dashboard tracking weekly sales and stock trends for a small retail client, turning raw spreadsheet exports into a clear weekly view.</p>
+      </div>
+
+      <div class="p-card support-card reveal" data-cat="data">
+        <span class="icon">🧮</span>
+        <div class="p-tag" style="--tag-color:var(--accent-blue);">survey analysis</div>
+        <h3>Community Market Survey</h3>
+        <p>Cleaned and analysed vendor survey responses, summarising demand trends into a short report to support a local decision.</p>
+      </div>
+
       <!-- Photography -->
       <div class="p-card reveal" data-cat="photo">
         <div class="soon-grid">coming soon</div>
@@ -644,13 +664,14 @@
     <div class="about-grid">
       <div class="reveal"><div class="avatar">FKM</div></div>
       <div class="about-text reveal">
-        <p>I'm <strong>Francis Kelvin Mkanda</strong>, a creative and technical professional based in Malawi. My work sits at the intersection of three disciplines that most people keep separate: <strong>graphic design</strong>, <strong>web development</strong>, and <strong>tech support</strong> — and I've found that each one makes me better at the other two.</p>
+        <p>I'm <strong>Francis Kelvin Mkanda</strong>, a creative and technical professional based in Malawi. My work sits at the intersection of four disciplines that most people keep separate: <strong>graphic design</strong>, <strong>web development</strong>, <strong>data analysis</strong>, and <strong>tech support</strong> — and I've found that each one makes me better at the others.</p>
         <p>As a designer, I build visual identities — logos, posters, social media graphics, and UI/UX layouts — that give ideas a face. As a developer, I turn those identities into responsive, working websites, and stay on to maintain them. And as a support specialist, I spend real time helping everyday people — not just businesses — actually use their phones and computers: troubleshooting problems, installing software, and training people patiently until it clicks.</p>
         <p>That last part matters most to me. Technology only helps people if they know how to use it, and I genuinely enjoy being the person who bridges that gap. Lately, I've been growing a new eye for <strong>photography</strong>, and I'm building it into the same practice — one more way of helping people see things clearly.</p>
         <div class="skill-tags">
           <span>Branding</span><span>Logo Design</span><span>UI/UX</span>
           <span>HTML/CSS/JS</span><span>Responsive Web Dev</span>
-          <span>Troubleshooting</span><span>User Training</span><span>Photography (growing)</span>
+          <span>Troubleshooting</span><span>User Training</span>
+          <span>Data Analysis</span><span>Photography (growing)</span>
         </div>
       </div>
     </div>
@@ -802,6 +823,7 @@
   var roles = [
     {text:'Graphic Designer', cls:'brown'},
     {text:'Web Developer', cls:'blue'},
+    {text:'Data Analyst', cls:'blue'},
     {text:'Tech Support Specialist', cls:'plain'}
   ];
   var roleWord = document.getElementById('roleWord');
