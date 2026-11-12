@@ -619,3 +619,78 @@
   .focus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
   .contact-grid{align-items:start;}
   .contact-list li{word-break:break-word;}
+
+
+/* MOBILE HEADER REDESIGN */
+@media (max-width: 860px) {
+  #site-header {
+    background: color-mix(in srgb, var(--bg) 94%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+  }
+  #site-header nav.wrap {
+    height: 68px;
+    padding-left: 18px;
+    padding-right: 18px;
+    gap: 12px;
+  }
+  #site-header .logo {
+    min-width: 0;
+    font-size: clamp(.88rem, 4vw, 1.02rem);
+    letter-spacing: -.045em;
+    gap: 5px;
+    white-space: nowrap;
+  }
+  #site-header .nav-right { gap: 9px; flex-shrink: 0; }
+  #site-header .theme-toggle,
+  #site-header .hamburger {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+  }
+  #site-header .theme-toggle { font-size: .95rem; background: var(--bg-elev); }
+  #site-header .hamburger { background: var(--text); border-color: var(--text); }
+  #site-header .hamburger .bar { background: var(--bg); }
+  #site-header .nav-links {
+    top: 76px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+    padding: 10px;
+    gap: 2px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--bg-elev);
+    box-shadow: 0 22px 55px rgba(0,0,0,.32);
+    transform: translateY(-8px) scale(.985);
+    transform-origin: top center;
+  }
+  #site-header .nav-links.open { transform: translateY(0) scale(1); }
+  #site-header .nav-links a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 11px 14px;
+    border-radius: 10px;
+    font-size: .96rem;
+    color: var(--text-muted);
+  }
+  #site-header .nav-links a:hover,
+  #site-header .nav-links a[aria-current="page"] {
+    color: var(--text);
+    background: var(--bg-elev-2);
+  }
+  #site-header .nav-links a::after { display: none; }
+}
+@media (max-width: 380px) {
+  #site-header nav.wrap { padding-left: 14px; padding-right: 14px; }
+  #site-header .logo { font-size: .84rem; }
+  #site-header .nav-right { gap: 7px; }
+  #site-header .theme-toggle,
+  #site-header .hamburger { width: 37px; height: 37px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #site-header .nav-links,
+  #site-header .hamburger .bar { transition: none; }
+}
