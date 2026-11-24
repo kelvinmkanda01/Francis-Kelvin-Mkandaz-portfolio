@@ -30,14 +30,19 @@ hamburger.addEventListener('click', function(){ setMenuOpen(!navLinks.classList.
 document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setMenuOpen(false); });
 window.addEventListener('resize', function(){ if(window.innerWidth > 860) setMenuOpen(false); });
 
-// Reveal on scroll
+// Reveal and stagger content as it enters/leaves the viewport
 var revealEls = document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){
+document.querySelectorAll('.services-grid, .portfolio-grid, .tech-grid, .focus-grid, .certificate-grid').forEach(function(group){
+  Array.prototype.forEach.call(group.children, function(item, index){
+    item.style.setProperty('--reveal-delay', Math.min(index * 85, 340) + 'ms');
+  });
+});
+if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    entries.forEach(function(entry){
+      entry.target.classList.toggle('in', entry.isIntersecting);
     });
-  }, {threshold:.12});
+  }, {threshold:.14, rootMargin:'0px 0px -5% 0px'});
   revealEls.forEach(function(el){ io.observe(el); });
 } else {
   revealEls.forEach(function(el){ el.classList.add('in'); });
